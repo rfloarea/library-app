@@ -38,7 +38,9 @@
 .shelves {
     border: 1px solid yellow;
     background-color: blue;
-    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+    grid-template-rows: 1fr;
 }
 
 .book {
