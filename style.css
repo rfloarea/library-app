@@ -14,6 +14,11 @@
     height: 500px;
 }
 
+.lib-card {
+    border: 1px solid greenyellow;
+    background-color: aquamarine;
+}
+
 .modal {
     border: 1px solid green;
     background-color: pink;
