@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    border: 1px solid purple;
+    background-color: blueviolet;
+}
+
+.stack {
+    border: 1px solid yellow;
+    background-color: blue;
+    height: 500px;
+}
+
+.modal {
+    border: 1px solid green;
+    background-color: pink;
+    height: 200px;
+}
+
+.footer {
+    border: 1px solid red;
+    background-color: orange;
+}
