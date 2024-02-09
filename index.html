@@ -7,6 +7,35 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="header">
+        <h1>a lil library app</h1>
+        <button>add a book</button>
+    </div>
+    
+    <div class="stack">
+        <!--this is where we will insert new book elements-->
+        <!--it will be a flexible grid with min of 1 column, and max of 5-->
+        <!--every book element displays the modal input data in a book "card"-->
+        <!--at first the cards will be ordered by when they were added-->
+    </div>
+
+    <div class="modal">
+        <!--this opens after a user clicks: "add a book" and/or "edit"-->
+        <!--input fields are: title, author, pages, if read, comments/notes/description-->
+        <!--includes a "save" button (actual storage will be implemented later)-->
+        <!--includes an exit button which cancels any changes to data-->
+        <label for="title">title</label><input type="text" id="title">
+        <label for="author">author</label><input type="text" id="author">
+        <label for="pages">pages</label><input type="text" id="pages">
+        <label for="read">i have read</label><input type="checkbox" id="read">
+        <label for="notes">notes</label><textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+    </div>
+
+
+    <footer>
+        <p>playfully made by aLittleQueerCoder, aka rowen floarea</p>
+        <p>find the code on <a href="https://github.com/rfloarea/library-app">Github</a></p>
+    </footer>
     
 </body>
 </html>
