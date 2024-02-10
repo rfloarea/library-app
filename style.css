@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -86,10 +87,70 @@ li {
 }
 
 
-.modal {
+/* .modal {
     border: 1px solid green;
     background-color: pink;
     height: 200px;
+} */
+
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    background-color: var(--dark-background-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+form li + li {
+    margin-top: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+input,
+textarea {
+    font: 1em monospace;
+    box-sizing: border-box;
+    width: 300px;
+    border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #000;
+}
+
+textarea {
+    vertical-align: top;
+    height: 7em;
+}
+
+.saveBtn {
+    padding: 4px;
+    color: var(--light-text-color);
+    background-color: var(--dark-background-color);
+    border-radius: 5px;
+}
+
+.saveBtn:hover {
+    color: var(--dark-background-color);
+    background-color: var(--light-text-color);
+}
+
+.saveBtn:active {
+    color: var(--light-text-color);
+    background-color: var(--dark-background-color);
 }
 
 .footer {
