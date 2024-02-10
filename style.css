@@ -154,6 +154,11 @@ textarea {
 }
 
 .footer {
-    border: 1px solid red;
-    background-color: orange;
+    background-color: var(--dark-background-color);
+    color: var(--light-text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
