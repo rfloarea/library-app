@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>library app practice</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./script.js" defer>
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <div class="header">
@@ -14,10 +14,6 @@
     </div>
     
     <div class="shelves">
-        <!--this is where we will insert new book elements-->
-        <!--it will be a flexible grid with min of 1 column, and max of 5-->
-        <!--every book element displays the modal input data in a book "card"-->
-        <!--at first the cards will be ordered by when they were added-->
         <div class="book">
             <ul class="bookInfo">
                 <li id="title">The Title of the Book</li>
@@ -60,13 +56,8 @@
             </div>
         </div>
     </div>
-
-    <div class="modal">
-        <!--this opens after a user clicks: "add a book" and/or "edit"-->
-        <!--input fields are: title, author, pages, if read, comments/notes/description-->
-        <!--includes a "save" button (actual storage will be implemented later)-->
-        <!--includes an exit button which cancels any changes to data-->
-        <form action="" method="">
+    <dialog class="dialog">
+        <form action="" method="dialog">
             <ul>
                 <li>
                     <label for="title">title</label>
@@ -93,7 +84,8 @@
                 </li>
             </ul>
         </form>
-    </div>
+    </dialog>
+    
 
 
     <div class="footer">
