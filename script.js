@@ -72,8 +72,10 @@ function addBookToLibrary() {
   const newEditBtn = document.createElement('button');
   newEditBtn.classList.add('editBtn');
   newBookBtns.appendChild(newEditBtn);
+  newEditBtn.textContent = "edit";
 
   const newDeleteBtn = document.createElement('button');
   newDeleteBtn.classList.add('deleteBtn');
   newBookBtns.appendChild(newDeleteBtn);
+  newDeleteBtn.textContent = "delete";
 }
