@@ -38,11 +38,11 @@ function addBookToLibrary() {
   const shelves = document.querySelector('.shelves');
 
   const newBookElement = document.createElement('div');
-  newBookElement.classList.add('.book');
+  newBookElement.classList.add('book');
   shelves.appendChild(newBookElement);
 
   const newBookInfoElement = document.createElement('ul');
-  newBookInfoElement.classList.add('.bookInfo');
+  newBookInfoElement.classList.add('bookInfo');
   newBookElement.appendChild(newBookInfoElement);
 
   const newTitleElement = document.createElement('li');
@@ -66,14 +66,14 @@ function addBookToLibrary() {
   newNotesElement.textContent = newBook.notes;
 
   const newBookBtns = document.createElement('button');
-  newBookBtns.classList.add('.bookBtns');
+  newBookBtns.classList.add('bookBtns');
   newBookElement.appendChild(newBookBtns);
 
   const newEditBtn = document.createElement('button');
-  newEditBtn.classList.add('.editBtn');
+  newEditBtn.classList.add('editBtn');
   newBookBtns.appendChild(newEditBtn);
 
   const newDeleteBtn = document.createElement('button');
-  newDeleteBtn.classList.add('.deleteBtn');
+  newDeleteBtn.classList.add('deleteBtn');
   newBookBtns.appendChild(newDeleteBtn);
 }
