@@ -7,6 +7,7 @@
     --main-background-color: hsl(0, 0%, 16%);
     --main-text-color: hsla(33, 51%, 73%, 0.886);
     --main-border-color: hsla(33, 51%, 73%, 0.886);
+    --shelf-background-color: hsl(0, 3%, 30%);
 }
 
 .header {
@@ -22,12 +23,12 @@
     padding: 6px;
     color: var(--main-text-color);
     background-color: var(--main-background-color);
+    border-radius: 5px;
 }
 
 .addBookBtn:hover {
     color: var(--main-background-color);
     background-color: var(--main-text-color);
-    /* border: var(--main-background-color); */
 }
 
 .addBookBtn:active {
@@ -36,17 +37,53 @@
 }
 
 .shelves {
-    border: 1px solid yellow;
-    background-color: blue;
+    background-color: var(--shelf-background-color);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
     grid-template-rows: 1fr;
 }
 
 .book {
-    border: 1px solid green;
-    background-color: aquamarine;
+    padding: 10px;
+    margin: 20px;
+    background-color: var(--main-background-color);
+    border-radius: 5px;
+    gap: 10px;
 }
+
+li {
+    list-style: none;
+    padding: 2px;
+    color: var(--main-text-color);
+    /* line-height: 1.5rem; */
+}
+
+.bookBtns {
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+
+.editBtn,
+.deleteBtn {
+    padding: 4px;
+    color: var(--main-text-color);
+    background-color: var(--main-background-color);
+    border-radius: 5px;
+}
+
+.editBtn:hover,
+.deleteBtn:hover {
+    color: var(--main-background-color);
+    background-color: var(--main-text-color);
+}
+
+.editBtn:active,
+.deleteBtn:active {
+    color: var(--main-text-color);
+    background-color: var(--main-background-color);
+}
+
 
 .modal {
     border: 1px solid green;
