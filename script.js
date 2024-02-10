@@ -5,7 +5,7 @@ const addBookBtn = document.querySelector('.addBookBtn');
 const dialog = document.querySelector('.dialog');
 const saveBtn = document.querySelector('.saveBtn');
 
-addBookBtn.addEventListener("click", () => dialog.showModal());
+addBookBtn.addEventListener("click", () => buildNewBook(newBook));
 saveBtn.addEventListener("click", () => dialog.close());
 
 // book constructor to make the book objects
@@ -17,8 +17,9 @@ function Book(title, author, pages, read, notes) {
     this.notes = notes;
 };
 
-// eventlistern on "add a book" opens a form
-// submitting that form pushes that data into these values below
+
+// should i wrap this in a func? fine, but when do we invoke it?
+// on "add a book"
 const newBook = Object.create(Book);
 // this is dummy data
 newBook.title = "Babel"; // form data from "title"
@@ -27,55 +28,66 @@ newBook.pages = "500 pages"; // form data from "pages"
 newBook.read = "I have read"; // form data from "read"
 newBook.notes = "This book is amazing!"; // form data from "notes"
 
-addBookToLibrary(newBook);
+
+function getNewBookInputs(newBook) {
+ 
+}
+
+
+
+
+;
 // then generate and display a new element at newBook's index
-function addBookToLibrary() {
-  myLibrary.push(newBook);
-  console.log(myLibrary);
-  // find list object in array
+function buildNewBook(newBook) {
+    dialog.showModal();
 
-  // build a new element for that object
-  const shelves = document.querySelector('.shelves');
+    myLibrary.push(newBook);
+    console.log(newBook);
+    console.log(myLibrary);
+    // find list object in array
 
-  const newBookElement = document.createElement('div');
-  newBookElement.classList.add('book');
-  shelves.appendChild(newBookElement);
+    // build a new element for that object
+    const shelves = document.querySelector('.shelves');
 
-  const newBookInfoElement = document.createElement('ul');
-  newBookInfoElement.classList.add('bookInfo');
-  newBookElement.appendChild(newBookInfoElement);
+    const newBookElement = document.createElement('div');
+    newBookElement.classList.add('book');
+    shelves.appendChild(newBookElement);
 
-  const newTitleElement = document.createElement('li');
-  newBookInfoElement.appendChild(newTitleElement);
-  newTitleElement.textContent = newBook.title;
+    const newBookInfoElement = document.createElement('ul');
+    newBookInfoElement.classList.add('bookInfo');
+    newBookElement.appendChild(newBookInfoElement);
 
-  const newAuthorElement = document.createElement('li');
-  newBookInfoElement.appendChild(newAuthorElement);
-  newAuthorElement.textContent = newBook.author;
+    const newTitleElement = document.createElement('li');
+    newBookInfoElement.appendChild(newTitleElement);
+    newTitleElement.textContent = newBook.title;
 
-  const newPagesElement = document.createElement('li');
-  newBookInfoElement.appendChild(newPagesElement);
-  newPagesElement.textContent = newBook.pages;
+    const newAuthorElement = document.createElement('li');
+    newBookInfoElement.appendChild(newAuthorElement);
+    newAuthorElement.textContent = newBook.author;
 
-  const newReadElement = document.createElement('li');
-  newBookInfoElement.appendChild(newReadElement);
-  newReadElement.textContent = newBook.read;
+    const newPagesElement = document.createElement('li');
+    newBookInfoElement.appendChild(newPagesElement);
+    newPagesElement.textContent = newBook.pages;
 
-  const newNotesElement = document.createElement('li');
-  newBookInfoElement.appendChild(newNotesElement);
-  newNotesElement.textContent = newBook.notes;
+    const newReadElement = document.createElement('li');
+    newBookInfoElement.appendChild(newReadElement);
+    newReadElement.textContent = newBook.read;
 
-  const newBookBtns = document.createElement('button');
-  newBookBtns.classList.add('bookBtns');
-  newBookElement.appendChild(newBookBtns);
+    const newNotesElement = document.createElement('li');
+    newBookInfoElement.appendChild(newNotesElement);
+    newNotesElement.textContent = newBook.notes;
 
-  const newEditBtn = document.createElement('button');
-  newEditBtn.classList.add('editBtn');
-  newBookBtns.appendChild(newEditBtn);
-  newEditBtn.textContent = "edit";
+    const newBookBtns = document.createElement('button');
+    newBookBtns.classList.add('bookBtns');
+    newBookElement.appendChild(newBookBtns);
 
-  const newDeleteBtn = document.createElement('button');
-  newDeleteBtn.classList.add('deleteBtn');
-  newBookBtns.appendChild(newDeleteBtn);
-  newDeleteBtn.textContent = "delete";
+    const newEditBtn = document.createElement('button');
+    newEditBtn.classList.add('editBtn');
+    newBookBtns.appendChild(newEditBtn);
+    newEditBtn.textContent = "edit";
+
+    const newDeleteBtn = document.createElement('button');
+    newDeleteBtn.classList.add('deleteBtn');
+    newBookBtns.appendChild(newDeleteBtn);
+    newDeleteBtn.textContent = "delete";
 }
