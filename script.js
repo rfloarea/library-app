@@ -3,7 +3,10 @@ const myLibrary = [];
 
 const addBookBtn = document.querySelector('.addBookBtn');
 const dialog = document.querySelector('.dialog');
-addBookBtn.addEventListener("click", () => {dialog.showModal()});
+const saveBtn = document.querySelector('.saveBtn');
+
+addBookBtn.addEventListener("click", () => dialog.showModal());
+saveBtn.addEventListener("click", () => dialog.close());
 
 // book constructor to make the book objects
 function Book(title, author, pages, read, notes) {
