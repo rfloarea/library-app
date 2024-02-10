@@ -1,4 +1,3 @@
-// this is the array that will store all our book objects
 const myLibrary = [];
 
 const addBookBtn = document.querySelector('.addBookBtn');
@@ -15,9 +14,6 @@ saveBtn.addEventListener("click", () => {
     dialog.close();
 });
 
-
-
-// book constructor to make the book objects
 function Book(title, author, pages, read, notes) {
     this.title = title;
     this.author = author;
@@ -27,11 +23,14 @@ function Book(title, author, pages, read, notes) {
 };
 
 function addNewBookToLibrary() {
-    const titleInput = document.querySelector('#title').value;
-    const authorInput = document.querySelector('#author').value;
-    const pagesInput = document.querySelector('#pages').value;
-    const readInput = document.querySelector('#read').value;
-    const notesInput = document.querySelector('#notes').value;
+    const form = document.querySelector('#addBook');
+
+    const titleInput = form.elements['title'].value;
+    const authorInput = form.elements['author'].value;
+    const pagesInput = form.elements['pages'].value;
+    const readInput = form.element['read'].value;
+    const notesInput = form.element['notes'].value;
+    
     const newBook = new Book(titleInput, authorInput, pagesInput, readInput, notesInput);
     myLibrary.push(newBook);
     console.log(newBook);
