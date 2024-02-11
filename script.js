@@ -53,12 +53,12 @@ function buildNewBookElement() {
 
 
     // book shelf
-    const shelf = document.querySelector('.shelf');
+    const bookShelf = document.querySelector('.book-shelf');
 
     // book
     const bookElement = document.createElement('div');
     bookElement.classList.add('book');
-    shelf.appendChild(bookElement);
+    bookShelf.appendChild(bookElement);
 
     //title
     const titleElement = document.createElement('p');
@@ -87,22 +87,12 @@ function buildNewBookElement() {
     // note
     const newNotesElement = document.createElement('li');
     newNotesElement.setAttribute('id', 'notes');
-    newBookInfoElement.appendChild(newNotesElement);
+    bookElement.appendChild(newNotesElement);
     newNotesElement.textContent = `Notes: ${newBook.notes}`;
 
     // delete
     const deleteBtn = document.createElement('button');
-    deleteBtn.classList.add('button delete-button');
+    deleteBtn.classList.add('button', 'delete-button');
     bookElement.appendChild(deleteBtn);
     deleteBtn.textContent = "Delete";
 };
-
-
-
-
-// BELOW IS SUBJECT TO REVISION
-
-
-
-const deleteBtn = document.querySelector('.deleteBtn');
-
