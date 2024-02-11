@@ -49,21 +49,10 @@ function addBookToLibrary(newBook) {
 }; 
 
 // Book UI
-
-// a little helper function to create elements
-
-
 function buildNewBookElement() {
     // TODO: some way to grab our book from the library array
 
-    // book shelf
-    const bookShelf = document.querySelector('.book-shelf');
-
-    // book
-    const bookElement = document.createElement('div');
-    bookElement.classList.add('book');
-    bookShelf.appendChild(bookElement);
-
+    // helper function
     function createElementWith(type, className, textContent) {
         const element = document.createElement(type);
         element.classList.add(className);
@@ -71,6 +60,13 @@ function buildNewBookElement() {
         element.textContent = textContent;
         return element;
     }
+    // book shelf
+    const bookShelf = document.querySelector('.book-shelf');
+
+    // book
+    const bookElement = document.createElement('div');
+    bookElement.classList.add('book');
+    bookShelf.appendChild(bookElement);
 
     //title
     const titleElement = createElementWith(`p`, `title`, `Title: ${newBook.title}`)

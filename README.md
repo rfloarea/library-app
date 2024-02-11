@@ -37,3 +37,9 @@ I thought I should give up. My mind was so knotted up. So I laid on the hard flo
 I decided to create a new branch focused on simplicity. I realized that this isn't going to be the last time that I feel crammed for time and don't know enough to go on. But I'm still going to have to go on. There are worse things, for sure. And what's better, giving up now? Or figuring out a way to move through this difficult and unknown situation? I'd be much more proud of myself for the latter. That is, I want to be the person who can stick with difficult things and learn from them. Not the person who runs away.
 
 So far, it's really good. I know that I "wasted" a lot of time. But it's not a waste if I use what I learned to move smoother through this iteration.
+
+*you get the idea @11:50pm*
+
+The crude functionality is there. We can add a book to our UI using form data.
+
+The problem is I want it to interact with our array much more. This will really come into play with a "delete" and "edit" button. Through those we will learn how to access specific objects and modify them. Important stuff. But it is late and I'm growing tired. I will push these changes and come back tomorrow. It's too late for my brain to handle a merge. That's tomorrow rowen's problem.
