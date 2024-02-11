@@ -72,9 +72,7 @@ label {
 input,
 textarea {
     font: 1em monospace;
-    box-sizing: border-box;
-    width: 300px;
-    border: 1px solid #999;
+    width: 50%;
 }
 
 

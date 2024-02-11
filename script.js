@@ -1,19 +1,17 @@
 const myLibrary = [];
 
-function Book(title, author, pages, published, read, notes) {
+function Book(title, author, pages, published, notes) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.published = published;
-    this.read = read;
     this.notes = notes;
 };
 
 // Placeholder Books
-// ADD PUBSLISHED YEAR
-const book1 = new Book("Babel", "R.F. Kuang", 544, 2022, true, "Such an amazing book.");
-const book2 = new Book("Living in Data", "Jer Thorp", 300, 2021, true, "A great read, and other platitudes.");
-const book3 = new Book("Left Hand of Darkness", "Ursula K. Le Guinn", 341, 1969, true, "Read and see for yourself.");
+const book1 = new Book("Babel", "R.F. Kuang", 544, 2022, "Such an amazing book.");
+const book2 = new Book("Living in Data", "Jer Thorp", 300, 2021, "A great read, and other platitudes.");
+const book3 = new Book("Left Hand of Darkness", "Ursula K. Le Guinn", 341, 1969, "Read and see for yourself.");
 myLibrary.push(book1, book2, book3);
 
 
@@ -78,12 +76,6 @@ function buildNewBookElement() {
     pagesElement.classList.add('pages');
     bookElement.appendChild(pagesElement);
     pagesElement.textContent = `Number of pages: ${Book.pages}`;
-
-    // if read
-    const newReadElement = document.createElement('li');
-    newReadElement.setAttribute('id', 'read');
-    newBookInfoElement.appendChild(newReadElement);
-    newReadElement.textContent = `Have you read it? ${Book.read}`;
 
     // note
     const newNotesElement = document.createElement('li');
