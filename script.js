@@ -1,5 +1,14 @@
-// Hold Books
+// this is a test change to the branch to see how it works
+
 const myLibrary = [];
+
+function Book(title, author, pages, read, notes) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    this.notes = notes;
+};
 
 // Placeholder Books
 const book1 = new Book("Babel", "R.F. Kuang", 544, true, "Such an amazing book.");
@@ -13,44 +22,24 @@ const dialog = document.querySelector('.dialog');
 const form = document.querySelector('#addBook');
 const saveBtn = document.querySelector('.saveBtn');
 const deleteBtn = document.querySelector('.deleteBtn');
+const titleInput = form.elements['title'].value;
+const authorInput = form.elements['author'].value;
+const pagesInput = form.elements['pages'].value;
+const readInput = form.elements['read'].checked;
+const notesInput = form.elements['notes'].value;
 
 addBookBtn.addEventListener("click", () => dialog.showModal());
 dialog.addEventListener("submit", (event) => {
     event.preventDefault();
-    addNewBookToLibrary();
+    addBookToLibrary();
     buildNewBookElement();
     form.reset();
 });
-saveBtn.addEventListener("click", () => {
-    dialog.close();
-});
-deleteBtn.addEventListener("click", (event) => {
-    // climb the family chain from button to book
-    let index = event.target.parentNode.id;
-    // remove book child from shelves parent
-    myLibrary.splice(index, 1);
-    return myLibrary;
-});
+saveBtn.addEventListener("click", () => { dialog.close() });
 
-// Book Object Constructor
-function Book(title, author, pages, read, notes) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.notes = notes;
-};
+const newBook = new Book(titleInput, authorInput, pagesInput, readInput, notesInput);
 
-function addNewBookToLibrary() {
-    const form = document.querySelector('#addBook');
-
-    const titleInput = form.elements['title'].value;
-    const authorInput = form.elements['author'].value;
-    const pagesInput = form.elements['pages'].value;
-    const readInput = form.elements['read'].checked;
-    const notesInput = form.elements['notes'].value;
-
-    const newBook = new Book(titleInput, authorInput, pagesInput, readInput, notesInput);
+function addBookToLibrary() {
     myLibrary.push(newBook);
     console.log(myLibrary);
 };
@@ -99,11 +88,6 @@ function buildNewBookElement() {
     const newBookBtns = document.createElement('button');
     newBookBtns.classList.add('bookBtns');
     newBookElement.appendChild(newBookBtns);
-
-    const newEditBtn = document.createElement('button');
-    newEditBtn.classList.add('editBtn');
-    newBookBtns.appendChild(newEditBtn);
-    newEditBtn.textContent = "edit";
 
     const newDeleteBtn = document.createElement('button');
     newDeleteBtn.classList.add('deleteBtn');
