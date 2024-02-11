@@ -17,16 +17,26 @@ myLibrary.push(book1, book2, book3);
 // dialog event handlers
 const newBookButton = document.querySelector('.new-book-button');
 newBookButton.addEventListener("click", () => dialog.showModal());
+const form = document.querySelector('#book-info-form');
 const dialog = document.querySelector('.dialog');
+dialog.addEventListener("submit", (event) => {
+    event.preventDefault();
+    addBookToLibrary();
+    console.log(myLibrary);
+    buildNewBookElement();
+    form.reset();
+});
+
 const saveButton = document.querySelector('.save-button');
 saveButton.addEventListener("click", () => { dialog.close() });
 
 
 // TODO: use this stuff to create a new book object
+
 const titleInput = form.elements['title'].value;
 const authorInput = form.elements['author'].value;
-const pagesInput = form.elements['pages'].value;
-const pubYearInput = form.elements['pub-year'].value;
+const pagesInput = parseInt(form.elements['pages'].value);
+const pubYearInput = parseInt(form.elements['pub-year'].value);
 const notesInput = form.elements['notes'].value;
 const newBook = new Book(titleInput, authorInput, pagesInput, pubYearInput, notesInput);
 
@@ -39,8 +49,8 @@ function addBookToLibrary() {
 
 // Book UI
 function buildNewBookElement() {
+    // TODO: some way to grab our book from the library array
 
-    
 
     // book shelf
     const shelf = document.querySelector('.shelf');
@@ -66,7 +76,7 @@ function buildNewBookElement() {
     const pubYearElement = document.createElement('p');
     pubYearElement.classList.add('pub-year');
     bookElement.appendChild(pubYearElement);
-    pubYearElement.textContent = `Year Published: ${newBook.publihsed}`
+    pubYearElement.textContent = `Year Published: ${newBook.published}`
 
     //pages
     const pagesElement = document.createElement('p');
@@ -92,13 +102,7 @@ function buildNewBookElement() {
 
 // BELOW IS SUBJECT TO REVISION
 
-const form = document.querySelector('#addBook');
+
 
 const deleteBtn = document.querySelector('.deleteBtn');
 
-dialog.addEventListener("submit", (event) => {
-    event.preventDefault();
-    addBookToLibrary();
-    buildNewBookElement();
-    form.reset();
-});
