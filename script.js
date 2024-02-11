@@ -28,9 +28,10 @@ function addNewBookToLibrary() {
     const titleInput = form.elements['title'].value;
     const authorInput = form.elements['author'].value;
     const pagesInput = form.elements['pages'].value;
-    const readInput = form.element['read'].value;
-    const notesInput = form.element['notes'].value;
-    
+    const readInput = form.elements['read'].checked;
+    const notesInput = form.elements['notes'].value;
+
+
     const newBook = new Book(titleInput, authorInput, pagesInput, readInput, notesInput);
     myLibrary.push(newBook);
     console.log(newBook);
@@ -55,27 +56,27 @@ function buildNewBookElement() {
     const newTitleElement = document.createElement('li');
     newTitleElement.setAttribute('id', 'title');
     newBookInfoElement.appendChild(newTitleElement);
-    newTitleElement.textContent = Book.title;
+    newTitleElement.textContent = `Title: ${Book.title}`;
 
     const newAuthorElement = document.createElement('li');
     newAuthorElement.setAttribute('id', 'author');
     newBookInfoElement.appendChild(newAuthorElement);
-    newAuthorElement.textContent = Book.author;
+    newAuthorElement.textContent = `Author: ${Book.author}`;
 
     const newPagesElement = document.createElement('li');
     newPagesElement.setAttribute('id', 'pages');
     newBookInfoElement.appendChild(newPagesElement);
-    newPagesElement.textContent = Book.pages;
+    newPagesElement.textContent = `Number of pages: ${Book.pages}`;
 
     const newReadElement = document.createElement('li');
     newReadElement.setAttribute('id', 'read');
     newBookInfoElement.appendChild(newReadElement);
-    newReadElement.textContent = Book.read;
+    newReadElement.textContent = `Have you read it? ${Book.read}`;
 
     const newNotesElement = document.createElement('li');
     newNotesElement.setAttribute('id', 'notes');
     newBookInfoElement.appendChild(newNotesElement);
-    newNotesElement.textContent = Book.notes;
+    newNotesElement.textContent = `Notes: ${Book.notes}`;
 
     const newBookBtns = document.createElement('button');
     newBookBtns.classList.add('bookBtns');
