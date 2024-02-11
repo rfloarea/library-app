@@ -2,15 +2,17 @@
 
 const myLibrary = [];
 
-function Book(title, author, pages, read, notes) {
+function Book(title, author, pages, published, read, notes) {
     this.title = title;
     this.author = author;
     this.pages = pages;
+    this.published = published;
     this.read = read;
     this.notes = notes;
 };
 
 // Placeholder Books
+// ADD PUBSLISHED YEAR
 const book1 = new Book("Babel", "R.F. Kuang", 544, true, "Such an amazing book.");
 const book2 = new Book("Living in Data", "Jer Thorp", 300, true, "A great read, and other platitudes.");
 const book3 = new Book("Left Hand of Darkness", "Ursula K. Le Guinn", 341, true, "Read and see for yourself.");
@@ -47,50 +49,53 @@ function addBookToLibrary() {
 // Book UI
 function buildNewBookElement() {
     
-    const Book = myLibrary[myLibrary.length - 1];
-    console.log(Book);
-    
-    const shelves = document.querySelector('.shelves');
+    // book shelf
+    const shelf = document.querySelector('.shelf');
 
-    const newBookElement = document.createElement('div');
-    newBookElement.classList.add('book');
-    shelves.appendChild(newBookElement);
+    // book
+    const bookElement = document.createElement('div');
+    bookElement.classList.add('book');
+    shelf.appendChild(bookElement);
 
-    const newBookInfoElement = document.createElement('ul');
-    newBookInfoElement.classList.add('bookInfo');
-    newBookElement.appendChild(newBookInfoElement);
+    //title
+    const titleElement = document.createElement('p');
+    titleElement.classList.add('title');
+    bookElement.appendChild(titleElement);
+    titleElement.textContent = `Title: ${Book.title}`;
 
-    const newTitleElement = document.createElement('li');
-    newTitleElement.setAttribute('id', 'title');
-    newBookInfoElement.appendChild(newTitleElement);
-    newTitleElement.textContent = `Title: ${Book.title}`;
+    // author
+    const authorElement = document.createElement('p');
+    authorElement.classList.add('author');
+    bookElement.appendChild(authorElement);
+    authorElement.textContent = `Author: ${Book.author}`;
 
-    const newAuthorElement = document.createElement('li');
-    newAuthorElement.setAttribute('id', 'author');
-    newBookInfoElement.appendChild(newAuthorElement);
-    newAuthorElement.textContent = `Author: ${Book.author}`;
+    // year published
+    const pubYearElement = document.createElement('p');
+    pubYearElement.classList.add('pub-year');
+    bookElement.appendChild(pubYearElement);
+    pubYearElement.textContent = `Year Published: ${Book.publihsed}`
 
-    const newPagesElement = document.createElement('li');
-    newPagesElement.setAttribute('id', 'pages');
-    newBookInfoElement.appendChild(newPagesElement);
-    newPagesElement.textContent = `Number of pages: ${Book.pages}`;
+    //pages
+    const pagesElement = document.createElement('p');
+    pagesElement.classList.add('pages');
+    bookElement.appendChild(pagesElement);
+    pagesElement.textContent = `Number of pages: ${Book.pages}`;
 
+    // if read
     const newReadElement = document.createElement('li');
     newReadElement.setAttribute('id', 'read');
     newBookInfoElement.appendChild(newReadElement);
     newReadElement.textContent = `Have you read it? ${Book.read}`;
 
+    // note
     const newNotesElement = document.createElement('li');
     newNotesElement.setAttribute('id', 'notes');
     newBookInfoElement.appendChild(newNotesElement);
     newNotesElement.textContent = `Notes: ${Book.notes}`;
 
-    const newBookBtns = document.createElement('button');
-    newBookBtns.classList.add('bookBtns');
-    newBookElement.appendChild(newBookBtns);
-
-    const newDeleteBtn = document.createElement('button');
-    newDeleteBtn.classList.add('deleteBtn');
-    newBookBtns.appendChild(newDeleteBtn);
-    newDeleteBtn.textContent = "delete";
+    // delete
+    const deleteBtn = document.createElement('button');
+    deleteBtn.classList.add('button delete-button');
+    bookElement.appendChild(deleteBtn);
+    deleteBtn.textContent = "Delete";
 };

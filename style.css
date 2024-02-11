@@ -5,98 +5,54 @@
 }
 
 :root {
-    --dark-background-color: hsl(0, 0%, 16%);
-    --light-background-color: hsla(33, 51%, 73%, 0.886);
-    --light-text-color: hsla(33, 51%, 73%, 0.886);
-    --light-border-color: hsla(33, 51%, 73%, 0.886);
-    --shelf-background-color: hsl(0, 3%, 30%);
+    --light-background-color: hsl(0, 0%, 16%);
 }
 
 .header {
-    background-color: var(--dark-background-color);
-    color: var(--light-text-color);
+    background-color: black;
+    color: antiquewhite;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 16px;
 }
 
-.addBookBtn {
+.button {
     padding: 6px;
-    color: var(--light-text-color);
-    background-color: var(--dark-background-color);
+    color: antiquewhite;
+    background-color: black;
     border-radius: 5px;
 }
 
-.addBookBtn:hover {
-    color: var(--dark-background-color);
-    background-color: var(--light-text-color);
+.button:hover {
+    color: black;
+    background-color: antiquewhite;
 }
 
-.addBookBtn:active {
-    color: var(--light-text-color);
-    background-color: var(--dark-background-color);
+.button:active {
+    color: antiquewhite;
+    background-color: black;
 }
 
-.shelves {
-    background-color: var(--shelf-background-color);
+.book-shelf {
+    background-color: black;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
     grid-template-rows: 1fr;
 }
 
 .book {
+    color: antiquewhite;
     padding: 10px;
     margin: 20px;
-    background-color: var(--dark-background-color);
+    background-color: var(--light-background-color);
     border-radius: 5px;
     gap: 10px;
-}
-
-li {
-    list-style: none;
-    padding: 2px;
-    color: var(--light-text-color);
-    /* line-height: 1.5rem; */
-}
-
-.bookBtns {
-    display: flex;
-    margin: 5px;
-    justify-content: space-between;
-}
-
-.editBtn,
-.deleteBtn {
-    padding: 4px;
-    color: var(--light-text-color);
-    background-color: var(--dark-background-color);
-    border-radius: 5px;
-}
-
-.editBtn:hover,
-.deleteBtn:hover {
-    color: var(--dark-background-color);
-    background-color: var(--light-text-color);
-}
-
-.editBtn:active,
-.deleteBtn:active {
-    color: var(--light-text-color);
-    background-color: var(--dark-background-color);
 }
 
 ::backdrop {
     background-color: rgba(0,0,0,0.8);    
 }
-  
-
-
-/* .modal {
-    border: 1px solid green;
-    background-color: pink;
-    height: 200px;
-} */
 
 form {
     margin: 0 auto;
@@ -104,17 +60,7 @@ form {
     padding: 1em;
     border: 1px solid #ccc;
     border-radius: 1em;
-    background-color: var(--dark-background-color);
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-form li + li {
-    margin-top: 1em;
+    background-color: var(--light-background-color);
 }
 
 label {
@@ -131,10 +77,6 @@ textarea {
     border: 1px solid #999;
 }
 
-input:focus,
-textarea:focus {
-    border-color: #000;
-}
 
 textarea {
     vertical-align: top;
@@ -159,8 +101,8 @@ textarea {
 }
 
 .footer {
-    background-color: var(--dark-background-color);
-    color: var(--light-text-color);
+    background-color: var(--light-background-color);
+    color: antiquewhite;
     display: flex;
     flex-direction: column;
     align-items: center;
