@@ -8,13 +8,13 @@ function Book(title, author, pages, published, notes) {
     this.notes = notes;
 };
 
-// Placeholder Books
+// placeholder books
 const book1 = new Book("Babel", "R.F. Kuang", 544, 2022, "Such an amazing book.");
 const book2 = new Book("Living in Data", "Jer Thorp", 300, 2021, "A great read, and other platitudes.");
 const book3 = new Book("Left Hand of Darkness", "Ursula K. Le Guinn", 341, 1969, "Read and see for yourself.");
 myLibrary.push(book1, book2, book3);
 
-
+// dialog event handlers
 const newBookButton = document.querySelector('.new-book-button');
 newBookButton.addEventListener("click", () => dialog.showModal());
 const dialog = document.querySelector('.dialog');
@@ -22,34 +22,26 @@ const saveButton = document.querySelector('.save-button');
 saveButton.addEventListener("click", () => { dialog.close() });
 
 
-const form = document.querySelector('#addBook');
-
-const deleteBtn = document.querySelector('.deleteBtn');
+// TODO: use this stuff to create a new book object
 const titleInput = form.elements['title'].value;
 const authorInput = form.elements['author'].value;
 const pagesInput = form.elements['pages'].value;
-const readInput = form.elements['read'].checked;
+const pubYearInput = form.elements['pub-year'].value;
 const notesInput = form.elements['notes'].value;
+const newBook = new Book(titleInput, authorInput, pagesInput, pubYearInput, notesInput);
 
 
-dialog.addEventListener("submit", (event) => {
-    event.preventDefault();
-    addBookToLibrary();
-    buildNewBookElement();
-    form.reset();
-});
-
-
-const newBook = new Book(titleInput, authorInput, pagesInput, readInput, notesInput);
-
+// TODO: trigger this on 'save' event
 function addBookToLibrary() {
     myLibrary.push(newBook);
     console.log(myLibrary);
-};
+}; 
 
 // Book UI
 function buildNewBookElement() {
+
     
+
     // book shelf
     const shelf = document.querySelector('.shelf');
 
@@ -62,31 +54,31 @@ function buildNewBookElement() {
     const titleElement = document.createElement('p');
     titleElement.classList.add('title');
     bookElement.appendChild(titleElement);
-    titleElement.textContent = `Title: ${Book.title}`;
+    titleElement.textContent = `Title: ${newBook.title}`;
 
     // author
     const authorElement = document.createElement('p');
     authorElement.classList.add('author');
     bookElement.appendChild(authorElement);
-    authorElement.textContent = `Author: ${Book.author}`;
+    authorElement.textContent = `Author: ${newBook.author}`;
 
     // year published
     const pubYearElement = document.createElement('p');
     pubYearElement.classList.add('pub-year');
     bookElement.appendChild(pubYearElement);
-    pubYearElement.textContent = `Year Published: ${Book.publihsed}`
+    pubYearElement.textContent = `Year Published: ${newBook.publihsed}`
 
     //pages
     const pagesElement = document.createElement('p');
     pagesElement.classList.add('pages');
     bookElement.appendChild(pagesElement);
-    pagesElement.textContent = `Number of pages: ${Book.pages}`;
+    pagesElement.textContent = `Number of pages: ${newBook.pages}`;
 
     // note
     const newNotesElement = document.createElement('li');
     newNotesElement.setAttribute('id', 'notes');
     newBookInfoElement.appendChild(newNotesElement);
-    newNotesElement.textContent = `Notes: ${Book.notes}`;
+    newNotesElement.textContent = `Notes: ${newBook.notes}`;
 
     // delete
     const deleteBtn = document.createElement('button');
@@ -94,3 +86,19 @@ function buildNewBookElement() {
     bookElement.appendChild(deleteBtn);
     deleteBtn.textContent = "Delete";
 };
+
+
+
+
+// BELOW IS SUBJECT TO REVISION
+
+const form = document.querySelector('#addBook');
+
+const deleteBtn = document.querySelector('.deleteBtn');
+
+dialog.addEventListener("submit", (event) => {
+    event.preventDefault();
+    addBookToLibrary();
+    buildNewBookElement();
+    form.reset();
+});
