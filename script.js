@@ -1,9 +1,18 @@
+// Hold Books
 const myLibrary = [];
+
+// Placeholder Books
+const book1 = new Book("Babel", "R.F. Kuang", 544, true, "Such an amazing book.");
+const book2 = new Book("Living in Data", "Jer Thorp", 300, true, "A great read, and other platitudes.");
+const book3 = new Book("Left Hand of Darkness", "Ursula K. Le Guinn", 341, true, "Read and see for yourself.");
+myLibrary.push(book1, book2, book3);
+
 
 const addBookBtn = document.querySelector('.addBookBtn');
 const dialog = document.querySelector('.dialog');
 const form = document.querySelector('#addBook');
 const saveBtn = document.querySelector('.saveBtn');
+const deleteBtn = document.querySelector('.deleteBtn');
 
 addBookBtn.addEventListener("click", () => dialog.showModal());
 dialog.addEventListener("submit", (event) => {
@@ -15,7 +24,15 @@ dialog.addEventListener("submit", (event) => {
 saveBtn.addEventListener("click", () => {
     dialog.close();
 });
+deleteBtn.addEventListener("click", (event) => {
+    // climb the family chain from button to book
+    let index = event.target.parentNode.id;
+    // remove book child from shelves parent
+    myLibrary.splice(index, 1);
+    return myLibrary;
+});
 
+// Book Object Constructor
 function Book(title, author, pages, read, notes) {
     this.title = title;
     this.author = author;
@@ -33,13 +50,12 @@ function addNewBookToLibrary() {
     const readInput = form.elements['read'].checked;
     const notesInput = form.elements['notes'].value;
 
-
     const newBook = new Book(titleInput, authorInput, pagesInput, readInput, notesInput);
     myLibrary.push(newBook);
-    console.log(newBook);
     console.log(myLibrary);
 };
-    
+
+// Book UI
 function buildNewBookElement() {
     
     const Book = myLibrary[myLibrary.length - 1];
