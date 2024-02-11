@@ -17,12 +17,13 @@ myLibrary.push(book1, book2, book3);
 
 const newBookButton = document.querySelector('.new-book-button');
 newBookButton.addEventListener("click", () => dialog.showModal());
-
 const dialog = document.querySelector('.dialog');
+const saveButton = document.querySelector('.save-button');
+saveButton.addEventListener("click", () => { dialog.close() });
 
 
 const form = document.querySelector('#addBook');
-const saveBtn = document.querySelector('.saveBtn');
+
 const deleteBtn = document.querySelector('.deleteBtn');
 const titleInput = form.elements['title'].value;
 const authorInput = form.elements['author'].value;
@@ -37,7 +38,7 @@ dialog.addEventListener("submit", (event) => {
     buildNewBookElement();
     form.reset();
 });
-saveBtn.addEventListener("click", () => { dialog.close() });
+
 
 const newBook = new Book(titleInput, authorInput, pagesInput, readInput, notesInput);
 
