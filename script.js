@@ -2,6 +2,7 @@ const myLibrary = [];
 
 const addBookBtn = document.querySelector('.addBookBtn');
 const dialog = document.querySelector('.dialog');
+const form = document.querySelector('#addBook');
 const saveBtn = document.querySelector('.saveBtn');
 
 addBookBtn.addEventListener("click", () => dialog.showModal());
@@ -9,6 +10,7 @@ dialog.addEventListener("submit", (event) => {
     event.preventDefault();
     addNewBookToLibrary();
     buildNewBookElement();
+    form.reset();
 });
 saveBtn.addEventListener("click", () => {
     dialog.close();
