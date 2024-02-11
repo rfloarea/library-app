@@ -54,8 +54,11 @@
     background-color: rgba(0,0,0,0.8);    
 }
 
+dialog {
+    border-radius: 20px;
+}
+
 form {
-    margin: 0 auto;
     width: 300px;
     padding: 1em;
     border-radius: 10px;

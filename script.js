@@ -15,8 +15,12 @@ const book3 = new Book("Left Hand of Darkness", "Ursula K. Le Guinn", 341, 1969,
 myLibrary.push(book1, book2, book3);
 
 
-const addBookBtn = document.querySelector('.addBookBtn');
+const newBookButton = document.querySelector('.new-book-button');
+newBookButton.addEventListener("click", () => dialog.showModal());
+
 const dialog = document.querySelector('.dialog');
+
+
 const form = document.querySelector('#addBook');
 const saveBtn = document.querySelector('.saveBtn');
 const deleteBtn = document.querySelector('.deleteBtn');
@@ -26,7 +30,7 @@ const pagesInput = form.elements['pages'].value;
 const readInput = form.elements['read'].checked;
 const notesInput = form.elements['notes'].value;
 
-addBookBtn.addEventListener("click", () => dialog.showModal());
+
 dialog.addEventListener("submit", (event) => {
     event.preventDefault();
     addBookToLibrary();
