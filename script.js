@@ -1,5 +1,3 @@
-// this is a test change to the branch to see how it works
-
 const myLibrary = [];
 
 function Book(title, author, pages, published, read, notes) {
@@ -13,9 +11,9 @@ function Book(title, author, pages, published, read, notes) {
 
 // Placeholder Books
 // ADD PUBSLISHED YEAR
-const book1 = new Book("Babel", "R.F. Kuang", 544, true, "Such an amazing book.");
-const book2 = new Book("Living in Data", "Jer Thorp", 300, true, "A great read, and other platitudes.");
-const book3 = new Book("Left Hand of Darkness", "Ursula K. Le Guinn", 341, true, "Read and see for yourself.");
+const book1 = new Book("Babel", "R.F. Kuang", 544, 2022, true, "Such an amazing book.");
+const book2 = new Book("Living in Data", "Jer Thorp", 300, 2021, true, "A great read, and other platitudes.");
+const book3 = new Book("Left Hand of Darkness", "Ursula K. Le Guinn", 341, 1969, true, "Read and see for yourself.");
 myLibrary.push(book1, book2, book3);
 
 

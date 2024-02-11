@@ -29,3 +29,11 @@ No regrets. Just glad for the opportunity. At least I'm getting faster!
 I think I've missed the point.
 
 I haven't really been using the array. I've just been using it in a superficial way to store stuff, not to dynamically create UI elements from it. 
+
+*even later that same day @10:12pm*
+
+I thought I should give up. My mind was so knotted up. So I laid on the hard floor and pressed my palms to my eyes. I wrapped my ears in sythwave and just rested. Sipped some tea. Rested more. I blamed others, I blamed myself, and then I started to laugh, I started to smile, I picked up a book "To Be Taught, If Fortunate" by Becky Chambers. Much recommend.
+
+I decided to create a new branch focused on simplicity. I realized that this isn't going to be the last time that I feel crammed for time and don't know enough to go on. But I'm still going to have to go on. There are worse things, for sure. And what's better, giving up now? Or figuring out a way to move through this difficult and unknown situation? I'd be much more proud of myself for the latter. That is, I want to be the person who can stick with difficult things and learn from them. Not the person who runs away.
+
+So far, it's really good. I know that I "wasted" a lot of time. But it's not a waste if I use what I learned to move smoother through this iteration.
