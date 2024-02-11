@@ -56,46 +56,27 @@
 
 form {
     margin: 0 auto;
-    width: 400px;
+    width: 300px;
     padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 1em;
+    border-radius: 10px;
     background-color: var(--light-background-color);
-}
-
-label {
-    display: inline-block;
-    width: 90px;
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: antiquewhite;
 }
 
 input,
 textarea {
     font: 1em monospace;
-    width: 50%;
+    width: 75%;
+    margin-bottom: 6px;
 }
-
 
 textarea {
-    vertical-align: top;
     height: 7em;
-}
-
-.saveBtn {
-    padding: 4px;
-    color: var(--light-text-color);
-    background-color: var(--dark-background-color);
-    border-radius: 5px;
-}
-
-.saveBtn:hover {
-    color: var(--dark-background-color);
-    background-color: var(--light-text-color);
-}
-
-.saveBtn:active {
-    color: var(--light-text-color);
-    background-color: var(--dark-background-color);
 }
 
 .footer {
