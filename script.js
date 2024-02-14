@@ -26,12 +26,12 @@ const dialog = document.querySelector('.dialog');
 dialog.addEventListener("submit", (event) => {
     event.preventDefault();
     addBookToLibrary();
-    buildNewBookElement();
+    displayBook();
     form.reset();
 });
 
 function addBookToLibrary() {
-    // User input feeds our object constructor
+    // user input feeds our object constructor
     const titleInput = form.elements['title'].value;
     const authorInput = form.elements['author'].value;
     const pagesInput = form.elements['pages'].value;
@@ -39,20 +39,18 @@ function addBookToLibrary() {
     const notesInput = form.elements['notes'].value;
     const newBook = new Book(titleInput, authorInput, pagesInput, pubYearInput, notesInput);
     myLibrary.push(newBook);
-    console.log(newBook); // logs undefined
-    console.table(myLibrary); // logs only our dummy data
+    console.log(newBook);
+    console.table(myLibrary);
 }; 
 
 // Book UI
-function buildNewBookElement() {
-    // TODO: some way to grab our book from the library array
-    /* const book = function(){
-        find our book from our library array
-        iterate through the book object to
-    }
-    */
+function displayBook() {
 
-    // helper function
+    // retrieve our newest book from our library
+    const book = myLibrary[myLibrary.length - 1];
+    console.log(book);
+
+    // used to create our book element layout
     function createElementWith(type, className, textContent) {
         const element = document.createElement(type);
         element.classList.add(className);
@@ -69,21 +67,23 @@ function buildNewBookElement() {
     bookShelf.appendChild(bookElement);
 
     //title
-    const titleElement = createElementWith(`p`, `title`, `Title: ${newBook.title}`)
+    const titleElement = createElementWith(`p`, `title`, `Title: ${book.title}`)
 
     // author
-    const authorElement = createElementWith(`p`, `author`, `Author: ${newBook.author}`)
+    const authorElement = createElementWith(`p`, `author`, `Author: ${book.author}`)
 
     // year published
-    const pubYearElement = createElementWith(`p`, `pub-year`, `Year Published: ${newBook.published}`)
+    const pubYearElement = createElementWith(`p`, `pub-year`, `Year Published: ${book.published}`)
 
     //pages
-    const pagesElement = createElementWith('p', `pages`, `Number of pages: ${newBook.pages}`);
+    const pagesElement = createElementWith('p', `pages`, `Number of pages: ${book.pages}`);
 
     // note
-    const notesElement = createElementWith(`p`, `notes`, `Notes: ${newBook.notes}`);
+    const notesElement = createElementWith(`p`, `notes`, `Notes: ${book.notes}`);
 
     // delete
     const deleteBtn = createElementWith(`button`, `button`, `Delete`);
+
+    console.log(myLibrary);
 
 };
