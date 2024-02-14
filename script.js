@@ -21,11 +21,14 @@ const newBookButton = document.querySelector('.new-book-button');
 newBookButton.addEventListener("click", () => dialog.showModal());
 const saveButton = document.querySelector('.save-button');
 saveButton.addEventListener("click", () => { dialog.close() });
+// const deleteButton = document.querySelector('.delete-button');
+// deleteButton.addEventListener("click", () => deleteBook())
 const form = document.querySelector('#book-info-form');
 const dialog = document.querySelector('.dialog');
 dialog.addEventListener("submit", (event) => {
     event.preventDefault();
     addBookToLibrary();
+    // myLibrary.forEach(displayBook())
     displayBook();
     form.reset();
 });
@@ -43,8 +46,18 @@ function addBookToLibrary() {
     console.table(myLibrary);
 }; 
 
+function deleteBook() {
+
+    // find the grandparent of the parent of the delete button child in our nodelist
+    // find the index of that grandparent and slice it off
+    // then refresh the display of our library
+        // that would mean we would need to myLibrary.forEach(displayBook()) or something like that
+}
+
 // Book UI
 function displayBook() {
+    // TODO: display our book objects by iterating over myLibrary anytime a book is deleted or added
+
 
     // retrieve our newest book from our library
     const book = myLibrary[myLibrary.length - 1];
@@ -82,7 +95,8 @@ function displayBook() {
     const notesElement = createElementWith(`p`, `notes`, `Notes: ${book.notes}`);
 
     // delete
-    const deleteBtn = createElementWith(`button`, `button`, `Delete`);
+    // const deleteBtn = createElementWith(`button`, `button`, `Delete`);
+    // just until we write a way to refresh our display on every change
 
     console.log(myLibrary);
 

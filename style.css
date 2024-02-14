@@ -8,8 +8,14 @@
     --light-background-color: hsl(0, 0%, 16%);
 }
 
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 .header {
-    background-color: black;
+    background-color: var(--light-background-color);
     color: antiquewhite;
     display: flex;
     align-items: center;
