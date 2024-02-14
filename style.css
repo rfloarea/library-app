@@ -65,6 +65,10 @@ body {
 
 dialog {
     border-radius: 20px;
+    /* positioning */
+    position: fixed;
+    left: 35%;
+    top: 25%;
 }
 
 form {
