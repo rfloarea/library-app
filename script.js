@@ -1,5 +1,6 @@
 const myLibrary = [];
 
+// our book object constructor
 function Book(title, author, pages, published, notes) {
     this.title = title;
     this.author = author;
@@ -9,7 +10,7 @@ function Book(title, author, pages, published, notes) {
 };
 
 // placeholder books
-// display these in UI on window load
+// TODO: display these in UI on window load
 const book1 = new Book("Babel", "R.F. Kuang", 544, 2022, "Such an amazing book.");
 const book2 = new Book("Living in Data", "Jer Thorp", 300, 2021, "A great read, and other platitudes.");
 const book3 = new Book("Left Hand of Darkness", "Ursula K. Le Guinn", 341, 1969, "Read and see for yourself.");
@@ -18,39 +19,38 @@ myLibrary.push(book1, book2, book3);
 // dialog event handlers
 const newBookButton = document.querySelector('.new-book-button');
 newBookButton.addEventListener("click", () => dialog.showModal());
+const saveButton = document.querySelector('.save-button');
+saveButton.addEventListener("click", () => { dialog.close() });
 const form = document.querySelector('#book-info-form');
 const dialog = document.querySelector('.dialog');
 dialog.addEventListener("submit", (event) => {
     event.preventDefault();
     addBookToLibrary();
-    console.log(myLibrary);
     buildNewBookElement();
-    // form.reset();
+    form.reset();
 });
 
-const saveButton = document.querySelector('.save-button');
-saveButton.addEventListener("click", () => { dialog.close() });
-
-
-// TODO: use this stuff to create a new book object
-
-const titleInput = form.elements['title'].value;
-const authorInput = form.elements['author'].value;
-const pagesInput = parseInt(form.elements['pages'].value);
-const pubYearInput = parseInt(form.elements['pub-year'].value);
-const notesInput = form.elements['notes'].value;
-const newBook = new Book(titleInput, authorInput, pagesInput, pubYearInput, notesInput);
-
-
-// TODO: trigger this on 'save' event
-function addBookToLibrary(newBook) {
+function addBookToLibrary() {
+    // User input feeds our object constructor
+    const titleInput = form.elements['title'].value;
+    const authorInput = form.elements['author'].value;
+    const pagesInput = form.elements['pages'].value;
+    const pubYearInput = form.elements['pub-year'].value;
+    const notesInput = form.elements['notes'].value;
+    const newBook = new Book(titleInput, authorInput, pagesInput, pubYearInput, notesInput);
     myLibrary.push(newBook);
-    console.log(myLibrary);
+    console.log(newBook); // logs undefined
+    console.table(myLibrary); // logs only our dummy data
 }; 
 
 // Book UI
 function buildNewBookElement() {
     // TODO: some way to grab our book from the library array
+    /* const book = function(){
+        find our book from our library array
+        iterate through the book object to
+    }
+    */
 
     // helper function
     function createElementWith(type, className, textContent) {
