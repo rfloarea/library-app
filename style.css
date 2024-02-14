@@ -43,8 +43,8 @@ body {
 .book-shelf {
     background-color: black;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
-    grid-template-rows: 1fr;
+    overflow: auto;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 275px));
 }
 
 .book {
@@ -54,6 +54,9 @@ body {
     background-color: var(--light-background-color);
     border-radius: 5px;
     gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 ::backdrop {
