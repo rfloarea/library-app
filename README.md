@@ -2,14 +2,20 @@
 some practice with object constructors
 
 ## What I did (WIP)
-1. Built the UI for a small interactive web app
+1. Built a little web app using HTML, CSS, and JavaScript that functions as a simple "library".
 
 ## What I learned (WIP)
-1. I can't always get everything as perfect as I see them in my mind. But it does have to be good enough.
-2. Clear commits are really nice. I'm using the log to track where I'm at with this project. Super helpful!
-3. It's a really really good idea to make sure you have your files linked correctly before spending an hour trying to figure out why things aren't working...
-4. The X and Y problem showed up clearly. Caught myself before going too far.
-5. I physically felt myself figure something out. It was like a chill ran through me that was connected to the "correct" path in the code. So I typed, not even fully knowing why I was doing what I was doing. Sort of like typing english like this in the way that I don't really have to plot out all my moves, I can just type and how I can get to the end of the sentence in one piece. That sentence was very long and not a good example :D
+
+- How to use object constructors
+- How to play with arrays and objects
+- How to manipulate the DOM
+
+Meta-skills:
+- I can't always get everything as perfect as I see them in my mind. But it does have to be good enough.
+- Clear commits are really nice. I'm using the log to track where I'm at with this project. Super helpful!
+- It's a really really good idea to make sure you have your files linked correctly before spending an hour trying to figure out why things aren't working...
+- The X and Y problem showed up clearly. Caught myself before going too far.
+- I physically felt myself figure something out. It was like a chill ran through me that was connected to the "correct" path in the code. So I typed, not even fully knowing why I was doing what I was doing. Sort of like typing english like this in the way that I don't really have to plot out all my moves, I can just type and how I can get to the end of the sentence in one piece. That sentence was very long and not a good example :D
 
 ## Plog
 
@@ -43,3 +49,11 @@ So far, it's really good. I know that I "wasted" a lot of time. But it's not a w
 The crude functionality is there. We can add a book to our UI using form data.
 
 The problem is I want it to interact with our array much more. This will really come into play with a "delete" and "edit" button. Through those we will learn how to access specific objects and modify them. Important stuff. But it is late and I'm growing tired. I will push these changes and come back tomorrow. It's too late for my brain to handle a merge. That's tomorrow rowen's problem.
+
+---
+
+Wednesday, February 14th 2024 @7:16pm
+
+I did the thing! I went back into some old-er code I wrote and fixed stufF! Haha feels good, not only to check things off my list, but it feels like a learning milestone. A small thing for sure, but significant by comparison to where I was even a few days ago.
+
+There are still many things I want to do with this project, but it feels actually possible to come back over time and make small improvements. It's a bit of a mental shift. And it's one that I didn't know was waiting for me.
