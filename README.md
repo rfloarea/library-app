@@ -1,10 +1,11 @@
 # a lil library app
-some practice with object constructors
+Thanks to The Odin Project for being my guide!
 
-## What I did (WIP)
-1. Built a little web app using HTML, CSS, and JavaScript that functions as a simple "library".
+## What I did
+Built a little web app using HTML, CSS, and JavaScript that functions as a simple "library".
 
-## What I learned (WIP)
+## What I learned 
+*or, what I am learning from this project*
 
 - How to use object constructors
 - How to play with arrays and objects
@@ -15,7 +16,7 @@ Meta-skills:
 - Clear commits are really nice. I'm using the log to track where I'm at with this project. Super helpful!
 - It's a really really good idea to make sure you have your files linked correctly before spending an hour trying to figure out why things aren't working...
 - The X and Y problem showed up clearly. Caught myself before going too far.
-- I physically felt myself figure something out. It was like a chill ran through me that was connected to the "correct" path in the code. So I typed, not even fully knowing why I was doing what I was doing. Sort of like typing english like this in the way that I don't really have to plot out all my moves, I can just type and how I can get to the end of the sentence in one piece. That sentence was very long and not a good example :D
+- I physically felt myself figure something out. It was like a chill ran through me that was connected to the "correct" path in the code. So I typed, not even fully knowing why I was doing what I was doing. Sort of like how writing English doesn't always involve plotting out my sentences fully before writing them. I can just start and trust that I'll find my way to the end. I'm only noting it here for posterity. Not really sure what to do with this feeling yet (when it comes to coding).
 
 ## Plog
 
@@ -24,7 +25,7 @@ Saturday, Feb 10th, 2024 @7:17am
 I should have wrote some reflections from yesterday. But I can sum it up now before moving on:
 - It was the best of times, it was the worst of times.
 
-haha, I'm 10000% joking. But ti did take me too long to build the UI. I probably invested too much time into it. But also, I like things to look decent? Is that so bad? Also also, the script that powers this little app depends on the UI being a certain way. I need to have my elements in place before I can start messing with the DOM.
+haha, I'm 10000% joking. But it did take me too long to build the UI. I probably invested too much time into it. But also, I like things to look decent? Is that so bad? Also also, the script that powers this little app depends on the UI being a certain way. I need to have my elements in place before I can start messing with the DOM.
 
 No regrets. Just glad for the opportunity. At least I'm getting faster!
 
@@ -54,6 +55,6 @@ The problem is I want it to interact with our array much more. This will really 
 
 Wednesday, February 14th 2024 @7:16pm
 
-I did the thing! I went back into some old-er code I wrote and fixed stufF! Haha feels good, not only to check things off my list, but it feels like a learning milestone. A small thing for sure, but significant by comparison to where I was even a few days ago.
+I did the thing! I went back into some old-ish code and fixed stufF! Haha feels good, not only to check things off my list, but it feels like a learning milestone. A small thing for sure, but significant by comparison to where I was even a few days ago.
 
-There are still many things I want to do with this project, but it feels actually possible to come back over time and make small improvements. It's a bit of a mental shift. And it's one that I didn't know was waiting for me.
+There are still many things I want to do with this project that it has felt overwhelming at times. But now it feels actually possible to come back over time and make small improvements. It's a bit of a mental shift. And it's one that I didn't know was waiting for me.
